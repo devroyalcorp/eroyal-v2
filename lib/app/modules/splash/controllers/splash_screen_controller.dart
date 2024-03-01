@@ -13,7 +13,7 @@ class SplashScreenController extends GetxController {
 
     await Future.delayed(const Duration(seconds: 3));
 
-    route = Routes.HOME;
+    route = Routes.LOGIN;
 
     Get.offAllNamed(route);
   }
