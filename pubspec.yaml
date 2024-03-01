@@ -2,21 +2,33 @@ name: eroyal
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
-environment: 
-  sdk: '>=3.2.0-134.1.beta <4.0.0'
+environment:
+  sdk: ">=3.2.0-134.1.beta <4.0.0"
 
-dependencies: 
+dependencies:
   cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.10+1
   get: 4.6.6
-  flutter: 
-    sdk: flutter
+  google_fonts: ^6.1.0
 
-dev_dependencies: 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/img_logo.png"
+  min_sdk_android: 21
+
+dev_dependencies:
   flutter_lints: 3.0.1
-  lints: 3.0.0
-  flutter_test: 
+  flutter_test:
     sdk: flutter
+  lints: 3.0.0
 
-flutter: 
+flutter:
   uses-material-design: true
-
+  assets:
+    - assets/icons/
+    - assets/images/

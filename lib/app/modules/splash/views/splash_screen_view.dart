@@ -1,3 +1,5 @@
+import 'package:eroyal/app/core/assets.dart';
+import 'package:eroyal/app/core/widgets/image_picture.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -5,17 +7,17 @@ import 'package:get/get.dart';
 import '../controllers/splash_screen_controller.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
+  const SplashScreenView({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SplashScreenView'),
-        centerTitle: true,
-      ),
+    Get.put(SplashScreenController());
+
+    return const Scaffold(
       body: Center(
-        child: Text(
-          'SplashScreenView is working',
-          style: TextStyle(fontSize: 20),
+        child: EImages(
+          width: 200,
+          name: imgLogo,
         ),
       ),
     );
