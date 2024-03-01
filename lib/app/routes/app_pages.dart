@@ -1,3 +1,5 @@
+import 'package:eroyal/app/modules/login/bindings/login_binding.dart';
+import 'package:eroyal/app/modules/login/views/login_view.dart';
 import 'package:get/get.dart';
 
 import 'package:eroyal/app/modules/home/bindings/home_binding.dart';
@@ -22,6 +24,11 @@ class AppPages {
       name: _Paths.SPLASH_SCREEN,
       page: () => SplashScreenView(),
       binding: SplashScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }
