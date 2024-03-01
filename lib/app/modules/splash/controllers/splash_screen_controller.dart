@@ -1,20 +1,20 @@
+import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class SplashScreenController extends GetxController {
-  //TODO: Implement SplashScreenController
-
-  final count = 0.obs;
   @override
   void onInit() {
+    _onInit();
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  Future<void> _onInit() async {
+    late String route;
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+    await Future.delayed(const Duration(seconds: 3));
+
+    route = Routes.HOME;
+
+    Get.offAllNamed(route);
+  }
 }
