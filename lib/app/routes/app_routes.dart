@@ -8,6 +8,7 @@ abstract class Routes {
   static const SPLASH = _Paths.SPLASH;
   static const LOGIN = _Paths.LOGIN;
   static const PROFILE = _Paths.PROFILE;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const SPLASH = '/splash-screen';
   static const LOGIN = '/login';
   static const PROFILE = '/profile';
+  static const NOTIFICATION = '/notification';
 }

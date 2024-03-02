@@ -6,6 +6,8 @@ import 'package:eroyal/app/modules/login/bindings/login_binding.dart';
 import 'package:eroyal/app/modules/login/views/login_view.dart';
 import 'package:eroyal/app/modules/profile/bindings/profile_binding.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
+import 'package:eroyal/app/modules/notification/bindings/notification_binding.dart';
+import 'package:eroyal/app/modules/notification/views/notification_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
 import 'package:eroyal/app/modules/splash/views/splash_screen_view.dart';
 
@@ -19,7 +21,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -29,13 +31,18 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => LoginView(),
+      page: () => const LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE,
       page: () => ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION,
+      page: () => NotificationView(),
+      binding: NotificationBinding(),
     ),
   ];
 }
