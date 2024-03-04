@@ -9,6 +9,8 @@ const grey = Color(0xFFD9D9D9);
 const greyHint = Color.fromRGBO(191, 186, 186, 1);
 const greyIcon = Color.fromRGBO(30, 30, 30, .4);
 const borderColor = Color.fromRGBO(217, 217, 217, 0.5);
+const red = Color.fromRGBO(236, 66, 96, 1);
+const greyText = Color.fromRGBO(99, 98, 98, 1);
 
 const BoxShadow shadowSmooth = BoxShadow(
   color: Color.fromRGBO(186, 190, 220, .15),

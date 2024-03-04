@@ -12,6 +12,8 @@ import 'package:eroyal/app/modules/presensi/bindings/presensi_binding.dart';
 import 'package:eroyal/app/modules/presensi/views/presensi_view.dart';
 import 'package:eroyal/app/modules/profile/bindings/profile_binding.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
+import 'package:eroyal/app/modules/profile_edit/bindings/profile_edit_binding.dart';
+import 'package:eroyal/app/modules/profile_edit/views/profile_edit_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
 import 'package:eroyal/app/modules/splash/views/splash_screen_view.dart';
 
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.BOTTOM_NAVIGATION_BAR,
       page: () => BottomNavigationBarView(),
       binding: BottomNavigationBarBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_EDIT,
+      page: () => ProfileEditView(),
+      binding: ProfileEditBinding(),
     ),
   ];
 }

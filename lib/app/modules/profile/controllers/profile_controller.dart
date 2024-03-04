@@ -1,20 +1,25 @@
 import 'package:get/get.dart';
 
+import '../../../core/assets.dart';
+import '../../../routes/app_pages.dart';
+
 class ProfileController extends GetxController {
-  //TODO: Implement ProfileController
+  final data = <String, String>{
+    "My Team": icMyTeam,
+    "My Customers": icMyCustomers,
+    "My Report": icReport,
+    "Privacy Policy": icPrivacyPolicy,
+    "Settings": icSettings,
+    "Help Center": icHelpCenter,
+  };
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void edit() {
+    Get.toNamed(Routes.PROFILE_EDIT);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  void logout() {
+    Get.back();
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+    Get.offAllNamed(Routes.LOGIN);
+  }
 }
