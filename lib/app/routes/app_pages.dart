@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:eroyal/app/modules/bottom_navigation_bar/bindings/bottom_navigation_bar_binding.dart';
+import 'package:eroyal/app/modules/bottom_navigation_bar/views/bottom_navigation_bar_view.dart';
 import 'package:eroyal/app/modules/home/bindings/home_binding.dart';
 import 'package:eroyal/app/modules/home/views/home_view.dart';
 import 'package:eroyal/app/modules/login/bindings/login_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.PRESENSI,
       page: () => PresensiView(),
       binding: PresensiBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOM_NAVIGATION_BAR,
+      page: () => BottomNavigationBarView(),
+      binding: BottomNavigationBarBinding(),
     ),
   ];
 }

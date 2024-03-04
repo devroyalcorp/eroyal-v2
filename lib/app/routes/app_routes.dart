@@ -10,6 +10,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const PRESENSI = _Paths.PRESENSI;
+  static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const NOTIFICATION = '/notification';
   static const PRESENSI = '/presensi';
+  static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
 }

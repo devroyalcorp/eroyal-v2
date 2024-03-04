@@ -9,7 +9,7 @@ class LoginController extends GetxController {
 
   void login() {
     if (loginKey.currentState!.validate()) {
-      Get.toNamed(Routes.HOME);
+      Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR);
     }
   }
 }
