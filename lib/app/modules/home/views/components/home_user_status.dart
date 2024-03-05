@@ -22,7 +22,7 @@ class HomeUserStatus extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 EText(
-                  "Task for Today",
+                  "Habit for Today",
                   style: EFonts.montserrat(6, 14),
                 ),
                 EText(
