@@ -27,3 +27,4 @@ const icEProsedur = "assets/icons/ic_e_prosedur.svg";
 // assets/images
 const imgLogo = "assets/images/img_logo.png";
 const imgProfile = "assets/images/img_profile.png";
+const imgAssets = "assets/images/img_coming_soon.png";

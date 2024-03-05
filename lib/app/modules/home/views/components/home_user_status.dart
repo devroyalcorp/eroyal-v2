@@ -66,7 +66,10 @@ class HomeUserStatus extends StatelessWidget {
                   borderSideColor: greyHint,
                 ),
               ],
-            )
+            ),
+            const ESizedBox(
+              height: 15,
+            ),
           ],
         ),
       ),

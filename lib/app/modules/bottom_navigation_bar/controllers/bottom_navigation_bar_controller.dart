@@ -18,8 +18,8 @@ import '../../../core/widgets/text.dart';
 class BottomNavigationBarController extends GetxController {
   final pages = <Widget>[
     const HomeView(),
-    PresensiView(),
-    NotificationView(),
+    const PresensiView(),
+    const NotificationView(),
     const ProfileView(),
   ];
 
@@ -53,7 +53,7 @@ class BottomNavigationBarController extends GetxController {
             "Exit App",
             style: EFonts.montserrat(5, 14),
           ),
-          const SizedBox(
+          const ESizedBox(
             height: 8,
           ),
           EText(
