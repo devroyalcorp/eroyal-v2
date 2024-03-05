@@ -2,6 +2,7 @@
 
 import 'package:eroyal/app/core/theme.dart';
 import 'package:eroyal/app/core/widgets/svg_picture.dart';
+import 'package:eroyal/app/core/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -56,21 +57,31 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                     children: List.generate(
                       controller.menuItems.length,
                       (index) => controller.isSelected(index)
-                          ? Row(
+                          ? Column(
                               children: [
                                 ESvg(
                                   controller.menuItems.values.elementAt(index),
+                                  color: primary,
+                                ),
+                                EText(
+                                  controller.menuTitleItems.values
+                                      .elementAt(index),
                                   color: primary,
                                 ),
                               ],
                             )
                           : InkWell(
                               onTap: () => controller.selectMenu(index),
-                              child: Center(
-                                child: ESvg(
-                                  controller.menuItems.values.elementAt(index),
-                                  color: greyIcon,
-                                ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  ESvg(
+                                    controller.menuItems.values
+                                        .elementAt(index),
+                                    color: greyIcon,
+                                  ),
+                                ],
                               ),
                             ),
                     ),

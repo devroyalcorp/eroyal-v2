@@ -18,8 +18,8 @@ import '../../../core/widgets/text.dart';
 class BottomNavigationBarController extends GetxController {
   final pages = <Widget>[
     const HomeView(),
-    PresensiView(),
-    NotificationView(),
+    const PresensiView(),
+    const NotificationView(),
     const ProfileView(),
   ];
 
@@ -28,6 +28,13 @@ class BottomNavigationBarController extends GetxController {
     "Presensi": icPresensi,
     "Notification": icNotification,
     "Profile": icProfile,
+  };
+
+  final menuTitleItems = <String, String>{
+    "Home": "Home",
+    "Presensi": "Presensi",
+    "Notification": "Notification",
+    "Profile": "Profile",
   };
 
   final currentIndex = 0.obs;
@@ -46,7 +53,7 @@ class BottomNavigationBarController extends GetxController {
             "Exit App",
             style: EFonts.montserrat(5, 14),
           ),
-          const SizedBox(
+          const ESizedBox(
             height: 8,
           ),
           EText(

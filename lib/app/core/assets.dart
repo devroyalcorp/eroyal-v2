@@ -17,6 +17,14 @@ const icRight = "assets/icons/ic_right.svg";
 const icDelete = "assets/icons/ic_delete.svg";
 const icLock = "assets/icons/ic_lock.svg";
 
+// icon fitur home
+const icTask = "assets/icons/ic_task.svg";
+const icDashboard = "assets/icons/ic_dashboard.svg";
+const icVisit = "assets/icons/ic_visit.svg";
+const icTrackingDocument = "assets/icons/ic_tracking_document.svg";
+const icEProsedur = "assets/icons/ic_e_prosedur.svg";
+
 // assets/images
 const imgLogo = "assets/images/img_logo.png";
 const imgProfile = "assets/images/img_profile.png";
+const imgAssets = "assets/images/img_coming_soon.png";

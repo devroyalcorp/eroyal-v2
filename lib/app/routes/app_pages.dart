@@ -17,6 +17,8 @@ import 'package:eroyal/app/modules/profile_edit/views/profile_edit_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
 import 'package:eroyal/app/modules/splash/views/splash_screen_view.dart';
 
+import '../core/widgets/coming_soon.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -42,7 +44,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => ProfileView(),
+      page: () => const ProfileView(),
       binding: ProfileBinding(),
     ),
     GetPage(
@@ -57,13 +59,17 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.BOTTOM_NAVIGATION_BAR,
-      page: () => BottomNavigationBarView(),
+      page: () => const BottomNavigationBarView(),
       binding: BottomNavigationBarBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE_EDIT,
-      page: () => ProfileEditView(),
+      page: () => const ProfileEditView(),
       binding: ProfileEditBinding(),
     ),
+    GetPage(
+      name: _Paths.COMING_SOON,
+      page: () => const ComingSoonScreen(),
+    )
   ];
 }

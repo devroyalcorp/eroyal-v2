@@ -1,20 +1,14 @@
+import 'package:eroyal/app/data/fitur_model.dart';
 import 'package:get/get.dart';
 
+import '../../../core/assets.dart';
+
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  var fiturList = <Fitur>[
+    Fitur(name: 'Task', svgUrl: icTask),
+    Fitur(name: 'Dashboard', svgUrl: icDashboard),
+    Fitur(name: 'Visit', svgUrl: icVisit),
+    Fitur(name: 'E-Prosedur', svgUrl: icEProsedur),
+    Fitur(name: 'Tracking Document', svgUrl: icTrackingDocument),
+  ].obs;
 }
