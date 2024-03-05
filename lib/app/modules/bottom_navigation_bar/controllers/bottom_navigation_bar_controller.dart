@@ -30,6 +30,13 @@ class BottomNavigationBarController extends GetxController {
     "Profile": icProfile,
   };
 
+  final menuTitleItems = <String, String>{
+    "Home": "Home",
+    "Presensi": "Presensi",
+    "Notification": "Notification",
+    "Profile": "Profile",
+  };
+
   final currentIndex = 0.obs;
 
   bool isSelected(int index) => currentIndex.value == index;

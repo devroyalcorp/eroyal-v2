@@ -8,6 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import 'components/home_user_info.dart';
+import 'components/home_user_menu.dart';
+import 'components/home_user_status.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -44,9 +47,13 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
-      body: const CustomScrollView(
+      body: CustomScrollView(
         scrollDirection: Axis.vertical,
-        slivers: [],
+        slivers: [
+          const HomeUserInfo(),
+          const HomeUserStatus(),
+          HomeUserMenu(controller: controller),
+        ],
       ),
     );
   }
