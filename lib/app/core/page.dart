@@ -66,6 +66,7 @@ class EPage extends StatelessWidget {
     return WillPopScope(
       onWillPop: onWillPop,
       child: Scaffold(
+        backgroundColor: white,
         body: Stack(
           children: [
             Column(

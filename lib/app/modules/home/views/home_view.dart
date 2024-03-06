@@ -20,7 +20,10 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       appBar: AppBar(
+        scrolledUnderElevation: 0.0,
+        backgroundColor: white,
         automaticallyImplyLeading: false,
         toolbarHeight: 70.h,
         title: Padding(
