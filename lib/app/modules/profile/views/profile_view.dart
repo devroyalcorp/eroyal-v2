@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../core/theme.dart';
 import '../controllers/profile_controller.dart';
 import 'components/profile_header.dart';
 import 'components/profile_menu.dart';
@@ -14,6 +15,8 @@ class ProfileView extends GetView<ProfileController> {
   Widget build(BuildContext context) {
     return const EPage(
       title: "Profile",
+      customAppBarTitleColor: white,
+      customAppBarColor: primary,
       padding: EdgeInsets.all(0),
       children: [
         ProfileHeader(),

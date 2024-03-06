@@ -17,7 +17,7 @@ class ProfileHeader extends GetView<ProfileController> {
     return EPadding(
       padding: const EdgeInsets.symmetric(
         horizontal: 18,
-        vertical: 15,
+        vertical: 10,
       ),
       child: Column(
         children: [

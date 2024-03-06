@@ -118,7 +118,7 @@ class EPage extends StatelessWidget {
                         child: Center(
                           child: EText(
                             title,
-                            style: EFonts.montserrat(5, 16),
+                            style: EFonts.montserrat(6, 18),
                             color: customAppBarTitleColor ?? black,
                           ),
                         ),
