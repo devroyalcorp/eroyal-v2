@@ -1,4 +1,5 @@
 import 'package:eroyal/app/core/widgets/svg_picture.dart';
+import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -60,7 +61,7 @@ class ProfileMenu extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         EPadding(
           padding: const EdgeInsets.symmetric(horizontal: 18),
@@ -72,17 +73,27 @@ class ProfileMenu extends GetView<ProfileController> {
         const ESizedBox(
           height: 6,
         ),
-        ...List.generate(
-          controller.data.length,
-          (index) => _item(
-            onTap: () {},
-            icon: controller.data.values.elementAt(index),
-            iconColor: primary,
-            action: controller.data.keys.elementAt(index),
+        ESizedBox(
+          height: 380,
+          child: Expanded(
+            child: ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemCount: controller.listFiturProfile.length,
+              itemBuilder: (_, index) {
+                return _item(
+                  icon: controller.listFiturProfile[index].icon,
+                  action: controller.listFiturProfile[index].name,
+                  onTap: () {
+                    controller.listFiturProfile[index].name == "My Team"
+                        ? Get.toNamed(Routes.PROFILE_MY_TEAM)
+                        : null;
+                  },
+                );
+              },
+            ),
           ),
-        ),
-        const ESizedBox(
-          height: 18,
         ),
         _item(
           icon: icLogout,

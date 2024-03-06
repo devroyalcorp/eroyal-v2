@@ -23,6 +23,7 @@ const icDashboard = "assets/icons/ic_dashboard.svg";
 const icVisit = "assets/icons/ic_visit.svg";
 const icTrackingDocument = "assets/icons/ic_tracking_document.svg";
 const icEProsedur = "assets/icons/ic_e_prosedur.svg";
+const icSearch = "assets/icons/ic_search.svg";
 
 // assets/images
 const imgLogo = "assets/images/img_logo.png";

@@ -39,6 +39,7 @@ class HomeUserStatus extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomCard(
+                  shapeBorder: true,
                   avatarPicture: false,
                   title: 'Status',
                   subtitle: 'Work From Office',
@@ -46,8 +47,10 @@ class HomeUserStatus extends StatelessWidget {
                   textColor: black,
                   backgroundColor: white,
                   borderSideColor: greyHint,
+                  suffixIcon: false,
                 ),
                 CustomCard(
+                  shapeBorder: true,
                   avatarPicture: false,
                   title: 'Clock-in',
                   subtitle: '08:00',
@@ -55,8 +58,10 @@ class HomeUserStatus extends StatelessWidget {
                   textColor: black,
                   backgroundColor: white,
                   borderSideColor: greyHint,
+                  suffixIcon: false,
                 ),
                 CustomCard(
+                  shapeBorder: true,
                   avatarPicture: false,
                   title: 'Clock-out',
                   subtitle: '17:00',
@@ -64,6 +69,7 @@ class HomeUserStatus extends StatelessWidget {
                   textColor: black,
                   backgroundColor: white,
                   borderSideColor: greyHint,
+                  suffixIcon: false,
                 ),
               ],
             ),

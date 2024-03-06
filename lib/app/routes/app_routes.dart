@@ -13,6 +13,7 @@ abstract class Routes {
   static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
   static const PROFILE_EDIT = _Paths.PROFILE_EDIT;
   static const COMING_SOON = _Paths.COMING_SOON;
+  static const PROFILE_MY_TEAM = _Paths.PROFILE_MY_TEAM;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
   static const PROFILE_EDIT = '/profile-edit';
   static const COMING_SOON = '/coming-soon';
+  static const PROFILE_MY_TEAM = '/profile-my-team';
 }

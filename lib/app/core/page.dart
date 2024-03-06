@@ -97,10 +97,11 @@ class EPage extends StatelessWidget {
                                   child: ESvg(
                                     icBackButton,
                                     radius: 20,
+                                    color: white,
                                   ),
                                 ),
                               ),
-                              const ESizedBox(width: 15),
+                              const ESizedBox(width: 25),
                             ],
                           ],
                         ),

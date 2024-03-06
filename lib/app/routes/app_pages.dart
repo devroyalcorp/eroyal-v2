@@ -14,6 +14,8 @@ import 'package:eroyal/app/modules/profile/bindings/profile_binding.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
 import 'package:eroyal/app/modules/profile_edit/bindings/profile_edit_binding.dart';
 import 'package:eroyal/app/modules/profile_edit/views/profile_edit_view.dart';
+import 'package:eroyal/app/modules/profile_my_team/bindings/profile_my_team_binding.dart';
+import 'package:eroyal/app/modules/profile_my_team/views/profile_my_team_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
 import 'package:eroyal/app/modules/splash/views/splash_screen_view.dart';
 
@@ -49,12 +51,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.NOTIFICATION,
-      page: () => NotificationView(),
+      page: () => const NotificationView(),
       binding: NotificationBinding(),
     ),
     GetPage(
       name: _Paths.PRESENSI,
-      page: () => PresensiView(),
+      page: () => const PresensiView(),
       binding: PresensiBinding(),
     ),
     GetPage(
@@ -70,6 +72,11 @@ class AppPages {
     GetPage(
       name: _Paths.COMING_SOON,
       page: () => const ComingSoonScreen(),
-    )
+    ),
+    GetPage(
+      name: _Paths.PROFILE_MY_TEAM,
+      page: () => ProfileMyTeamView(),
+      binding: ProfileMyTeamBinding(),
+    ),
   ];
 }
