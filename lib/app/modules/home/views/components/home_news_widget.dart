@@ -34,10 +34,10 @@ class HomeNewsWidget extends StatelessWidget {
             borderRadius: BorderRadius.all(
               Radius.circular(6.r),
             ),
-            color: white,
+            color: white.withOpacity(0.8),
             boxShadow: const [
               BoxShadow(
-                blurRadius: 20,
+                blurRadius: 10,
                 offset: Offset(0, 2),
                 color: greyHint,
               ),
