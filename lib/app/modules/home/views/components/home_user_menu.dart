@@ -8,13 +8,10 @@ import '../../../../core/widgets/sizedbox.dart';
 import '../../../../core/widgets/text.dart';
 import '../../controllers/home_controller.dart';
 
-class HomeUserMenu extends StatelessWidget {
+class HomeUserMenu extends GetView<HomeController> {
   const HomeUserMenu({
     super.key,
-    required this.controller,
   });
-
-  final HomeController controller;
 
   @override
   Widget build(BuildContext context) {

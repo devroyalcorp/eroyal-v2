@@ -33,7 +33,7 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
               ),
               Container(
                 padding: EdgeInsets.symmetric(
-                  vertical: 20.h,
+                  vertical: 10.h,
                   horizontal: 20.w,
                 ),
                 decoration: const BoxDecoration(
@@ -42,14 +42,6 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                     topLeft: Radius.circular(12),
                     topRight: Radius.circular(12),
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: grey,
-                      blurRadius: 20,
-                      offset: Offset(-4, 0),
-                      spreadRadius: 0,
-                    ),
-                  ],
                 ),
                 child: Obx(
                   () => Row(
@@ -62,6 +54,7 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                                 ESvg(
                                   controller.menuItems.values.elementAt(index),
                                   color: primary,
+                                  height: 30,
                                 ),
                                 EText(
                                   controller.menuTitleItems.values
