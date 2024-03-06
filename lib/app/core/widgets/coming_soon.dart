@@ -20,7 +20,7 @@ class ComingSoonScreen extends StatelessWidget {
             ESizedBox(
               height: 280,
               width: 280,
-              child: Image.asset(imgAssets),
+              child: Image.asset(imgComingSoon),
             ),
             EText(
               "Great things Coming Soon.",

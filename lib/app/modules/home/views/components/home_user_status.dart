@@ -22,7 +22,7 @@ class HomeUserStatus extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 EText(
-                  "Task for Today",
+                  "Habit for Today",
                   style: EFonts.montserrat(6, 14),
                 ),
                 EText(
@@ -33,7 +33,7 @@ class HomeUserStatus extends StatelessWidget {
               ],
             ),
             const ESizedBox(
-              height: 20,
+              height: 25,
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,9 +66,6 @@ class HomeUserStatus extends StatelessWidget {
                   borderSideColor: greyHint,
                 ),
               ],
-            ),
-            const ESizedBox(
-              height: 15,
             ),
           ],
         ),
