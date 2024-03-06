@@ -42,6 +42,13 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                     topLeft: Radius.circular(12),
                     topRight: Radius.circular(12),
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: grey,
+                      offset: Offset(0.0, 1.0), //(x,y)
+                      blurRadius: 4.0,
+                    ),
+                  ],
                 ),
                 child: Obx(
                   () => Row(
@@ -54,7 +61,6 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                                 ESvg(
                                   controller.menuItems.values.elementAt(index),
                                   color: primary,
-                                  height: 30,
                                 ),
                                 EText(
                                   controller.menuTitleItems.values

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../core/assets.dart';
 import '../../../../core/theme.dart';
 import '../../../../core/widgets/padding.dart';
 import '../../../../core/widgets/sizedbox.dart';
 import '../../../../core/widgets/text.dart';
+import '../../controllers/home_controller.dart';
 import 'home_news_widget.dart';
 
-class HomeListNews extends StatelessWidget {
+class HomeListNews extends GetView<HomeController> {
   const HomeListNews({
     super.key,
   });
@@ -44,12 +46,12 @@ class HomeListNews extends StatelessWidget {
               itemCount: 4,
               itemBuilder: (_, index) {
                 return HomeNewsWidget(
-                  image: imgNews1,
+                  image: imgNews2,
                   title:
-                      "Crypto Analysts Predict Dogecoin To Hit \$1 As Pepe, Bonk, New Meme Coins Explode",
-                  author: "James Spillane",
-                  date: "4 March, 2024",
-                  onTap: () {},
+                      "Cari Kasur Baru? Murah Banget di Transmart Full Day Sale",
+                  author: "Teti Purwanti, CNBC Indonesia",
+                  date: "7 Oct, 2023",
+                  onTap: () => controller.launchUrlNews(),
                 );
               },
             )

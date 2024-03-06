@@ -29,3 +29,4 @@ const imgLogo = "assets/images/img_logo.png";
 const imgProfile = "assets/images/img_profile.png";
 const imgComingSoon = "assets/images/img_coming_soon.png";
 const imgNews1 = "assets/images/img_news1.png";
+const imgNews2 = "assets/images/img_news2.png";

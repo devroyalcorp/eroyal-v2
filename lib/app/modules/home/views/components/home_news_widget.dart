@@ -28,7 +28,7 @@ class HomeNewsWidget extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          height: 100.h,
+          height: 110.h,
           padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
@@ -71,23 +71,21 @@ class HomeNewsWidget extends StatelessWidget {
                       ),
                     ),
                     const ESizedBox(
-                      height: 5,
+                      height: 4,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        EText(
-                          author,
-                          maxLines: 2,
-                          style: EFonts.montserrat(6, 12, greyText),
-                        ),
-                        EText(
-                          date,
-                          maxLines: 1,
-                          style: EFonts.montserrat(6, 12, greyText),
-                        ),
-                      ],
-                    )
+                    EText(
+                      author,
+                      maxLines: 2,
+                      style: EFonts.montserrat(6, 12, greyText),
+                    ),
+                    const ESizedBox(
+                      height: 2,
+                    ),
+                    EText(
+                      date,
+                      maxLines: 1,
+                      style: EFonts.montserrat(6, 12, greyText),
+                    ),
                   ],
                 ),
               ),
