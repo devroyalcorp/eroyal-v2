@@ -26,14 +26,14 @@ class BottomNavigationBarController extends GetxController {
   final menuItems = <String, String>{
     "Home": icHome,
     "Presensi": icPresensi,
-    "Notification": icNotification,
+    "Notifications": icNotification,
     "Profile": icProfile,
   };
 
   final menuTitleItems = <String, String>{
     "Home": "Home",
     "Presensi": "Presensi",
-    "Notification": "Notification",
+    "Notification": "Notifications",
     "Profile": "Profile",
   };
 
