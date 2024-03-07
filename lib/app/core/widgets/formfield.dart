@@ -122,7 +122,7 @@ class _EFormFieldState extends State<EFormField> {
       readOnly: widget.readOnly ?? false,
       decoration: InputDecoration(
         hintText: widget.hintText,
-        hintStyle: EFonts.montserrat(4, 12, greyHint),
+        hintStyle: EFonts.montserrat(4, 16, greyHint),
         contentPadding: EdgeInsets.symmetric(vertical: 14.h, horizontal: 16.w),
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.keyboardType == TextInputType.visiblePassword
@@ -191,7 +191,7 @@ class _EFormFieldState extends State<EFormField> {
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: widget.borderColor ?? borderColor,
+            color: widget.borderColor ?? grey,
           ),
         ),
         errorBorder: OutlineInputBorder(
