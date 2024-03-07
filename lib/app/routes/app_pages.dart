@@ -14,6 +14,8 @@ import 'package:eroyal/app/modules/profile/bindings/profile_binding.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
 import 'package:eroyal/app/modules/profile_edit/bindings/profile_edit_binding.dart';
 import 'package:eroyal/app/modules/profile_edit/views/profile_edit_view.dart';
+import 'package:eroyal/app/modules/profile_my_customers/bindings/profile_my_customers_binding.dart';
+import 'package:eroyal/app/modules/profile_my_customers/views/profile_my_customers_view.dart';
 import 'package:eroyal/app/modules/profile_my_team/bindings/profile_my_team_binding.dart';
 import 'package:eroyal/app/modules/profile_my_team/views/profile_my_team_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
@@ -77,6 +79,11 @@ class AppPages {
       name: _Paths.PROFILE_MY_TEAM,
       page: () => ProfileMyTeamView(),
       binding: ProfileMyTeamBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_MY_CUSTOMERS,
+      page: () => ProfileMyCustomersView(),
+      binding: ProfileMyCustomersBinding(),
     ),
   ];
 }

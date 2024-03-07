@@ -95,4 +95,11 @@ class ProfileMyTeamController extends GetxController {
     }
     filteredList.value = result;
   }
+
+  String generateInitials(String name) {
+    List<String> nameSplit = name.split(" ");
+    String firstNameInitial = nameSplit.first.substring(0, 1).toUpperCase();
+    String lastNameInitial = nameSplit.last.substring(0, 1).toUpperCase();
+    return "$firstNameInitial$lastNameInitial";
+  }
 }

@@ -87,7 +87,10 @@ class ProfileMenu extends GetView<ProfileController> {
                 onTap: () {
                   controller.listFiturProfile[index].name == "My Team"
                       ? Get.toNamed(Routes.PROFILE_MY_TEAM)
-                      : null;
+                      : controller.listFiturProfile[index].name ==
+                              "My Customers"
+                          ? Get.toNamed(Routes.PROFILE_MY_CUSTOMERS)
+                          : null;
                 },
               );
             },

@@ -59,7 +59,7 @@ class ProfileMyTeamView extends GetView<ProfileMyTeamController> {
                     itemCount: controller.filteredList.length,
                     itemBuilder: (_, index) {
                       final data = controller.filteredList[index];
-                      String initials = _generateInitials(data.name);
+                      String initials = controller.generateInitials(data.name);
                       return CustomCardMyTeam(
                         avatarPicture: data.profilePicture.isNotEmpty
                             ? data.profilePicture
@@ -123,11 +123,4 @@ class ProfileMyTeamView extends GetView<ProfileMyTeamController> {
       ],
     );
   }
-}
-
-String _generateInitials(String name) {
-  List<String> nameSplit = name.split(" ");
-  String firstNameInitial = nameSplit.first.substring(0, 1).toUpperCase();
-  String lastNameInitial = nameSplit.last.substring(0, 1).toUpperCase();
-  return "$firstNameInitial$lastNameInitial";
 }
