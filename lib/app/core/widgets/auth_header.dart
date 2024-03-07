@@ -16,7 +16,7 @@ class AuthHeader extends StatelessWidget {
           width: 150,
         ),
         ESizedBox(
-          height: 35,
+          height: 55,
         )
       ],
     );

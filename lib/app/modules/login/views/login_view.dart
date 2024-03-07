@@ -24,6 +24,7 @@ class LoginView extends GetView<LoginController> with Validation {
         child: Form(
           key: controller.loginKey,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Center(
@@ -64,7 +65,7 @@ class LoginView extends GetView<LoginController> with Validation {
                 ),
               ),
               const ESizedBox(
-                height: 40,
+                height: 60,
               ),
               ESubmitButton(
                 color: primary,
