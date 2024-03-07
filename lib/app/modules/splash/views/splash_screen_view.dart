@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../core/theme.dart';
 import '../controllers/splash_screen_controller.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
@@ -14,6 +15,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
     Get.put(SplashScreenController());
 
     return const Scaffold(
+      backgroundColor: white,
       body: Center(
         child: EImages(
           width: 200,

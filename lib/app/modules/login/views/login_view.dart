@@ -18,6 +18,7 @@ class LoginView extends GetView<LoginController> with Validation {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       appBar: AppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
