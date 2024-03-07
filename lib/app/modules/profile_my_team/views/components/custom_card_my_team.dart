@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../assets.dart';
-import '../theme.dart';
-import 'padding.dart';
-import 'sizedbox.dart';
-import 'text.dart';
+import '../../../../core/assets.dart';
+import '../../../../core/theme.dart';
+import '../../../../core/widgets/padding.dart';
+import '../../../../core/widgets/sizedbox.dart';
+import '../../../../core/widgets/text.dart';
 
-class CustomCard extends StatelessWidget {
-  const CustomCard({
+class CustomCardMyTeam extends StatelessWidget {
+  const CustomCardMyTeam({
     super.key,
     required this.title,
     required this.subtitle,
@@ -67,7 +67,21 @@ class CustomCard extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   )
-                : const SizedBox(),
+                : EPadding(
+                    padding: const EdgeInsets.only(left: 4, right: 14),
+                    child: SizedBox(
+                      height: 60,
+                      width: 60,
+                      child: CircleAvatar(
+                        backgroundColor: primary,
+                        child: EText(
+                          avatarPicture ?? "",
+                          style: EFonts.montserrat(6, 20),
+                          color: white,
+                        ),
+                      ),
+                    ),
+                  ),
             isAvatarPicture == true
                 ? const ESizedBox(
                     width: 12,

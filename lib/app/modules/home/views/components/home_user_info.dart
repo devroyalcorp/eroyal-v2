@@ -15,7 +15,7 @@ class HomeUserInfo extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
         child: CustomCard(
           shapeBorder: true,
-          avatarPicture: true,
+          isAvatarPicture: true,
           title: 'Alghany Kennedy Adam',
           subtitle: 'alghanyka@gmail.com',
           isThridLine: true,

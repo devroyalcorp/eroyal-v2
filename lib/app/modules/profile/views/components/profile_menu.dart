@@ -75,24 +75,22 @@ class ProfileMenu extends GetView<ProfileController> {
         ),
         ESizedBox(
           height: 380,
-          child: Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.zero,
-              itemCount: controller.listFiturProfile.length,
-              itemBuilder: (_, index) {
-                return _item(
-                  icon: controller.listFiturProfile[index].icon,
-                  action: controller.listFiturProfile[index].name,
-                  onTap: () {
-                    controller.listFiturProfile[index].name == "My Team"
-                        ? Get.toNamed(Routes.PROFILE_MY_TEAM)
-                        : null;
-                  },
-                );
-              },
-            ),
+          child: ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.zero,
+            itemCount: controller.listFiturProfile.length,
+            itemBuilder: (_, index) {
+              return _item(
+                icon: controller.listFiturProfile[index].icon,
+                action: controller.listFiturProfile[index].name,
+                onTap: () {
+                  controller.listFiturProfile[index].name == "My Team"
+                      ? Get.toNamed(Routes.PROFILE_MY_TEAM)
+                      : null;
+                },
+              );
+            },
           ),
         ),
         _item(

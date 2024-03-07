@@ -40,7 +40,7 @@ class HomeUserStatus extends StatelessWidget {
               children: [
                 CustomCard(
                   shapeBorder: true,
-                  avatarPicture: false,
+                  isAvatarPicture: false,
                   title: 'Status',
                   subtitle: 'Work From Office',
                   isThridLine: false,
@@ -51,7 +51,7 @@ class HomeUserStatus extends StatelessWidget {
                 ),
                 CustomCard(
                   shapeBorder: true,
-                  avatarPicture: false,
+                  isAvatarPicture: false,
                   title: 'Clock-in',
                   subtitle: '08:00',
                   isThridLine: false,
@@ -62,7 +62,7 @@ class HomeUserStatus extends StatelessWidget {
                 ),
                 CustomCard(
                   shapeBorder: true,
-                  avatarPicture: false,
+                  isAvatarPicture: false,
                   title: 'Clock-out',
                   subtitle: '17:00',
                   isThridLine: false,

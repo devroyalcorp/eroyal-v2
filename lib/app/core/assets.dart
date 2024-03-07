@@ -31,3 +31,18 @@ const imgProfile = "assets/images/img_profile.png";
 const imgComingSoon = "assets/images/img_coming_soon.png";
 const imgNews1 = "assets/images/img_news1.png";
 const imgNews2 = "assets/images/img_news2.png";
+const imgNoResult = "assets/images/img_no_result.png";
+const imgNoResultGif = "assets/images/img_no-result.gif";
+
+// avatar picture dummy
+const imgProfileTeam1 = "assets/images/img_profileTeam1.jpg";
+const imgProfileTeam2 = "assets/images/img_profileTeam2.jpg";
+const imgProfileTeam3 = "assets/images/img_profileTeam3.jpg";
+const imgProfileTeam4 = "assets/images/img_profileTeam4.jpg";
+const imgProfileTeam5 = "assets/images/img_profileTeam5.jpg";
+const imgProfileTeam6 = "assets/images/img_profileTeam6.jpg";
+const imgProfileTeam7 = "assets/images/img_profileTeam7.jpg";
+const imgProfileTeam8 = "assets/images/img_profileTeam8.jpg";
+const imgProfileTeam9 = "assets/images/img_profileTeam9.jpg";
+const imgProfileTeam10 = "assets/images/img_profileTeam10.png";
+const imgProfileTeam11 = "assets/images/img_profileTeam11.jpg";

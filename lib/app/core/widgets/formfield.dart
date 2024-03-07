@@ -191,7 +191,7 @@ class _EFormFieldState extends State<EFormField> {
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: widget.borderColor ?? borderColor,
+            color: widget.borderColor ?? grey,
           ),
         ),
         errorBorder: OutlineInputBorder(
