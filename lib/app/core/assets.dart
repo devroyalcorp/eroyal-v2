@@ -46,3 +46,11 @@ const imgProfileTeam8 = "assets/images/img_profileTeam8.jpg";
 const imgProfileTeam9 = "assets/images/img_profileTeam9.jpg";
 const imgProfileTeam10 = "assets/images/img_profileTeam10.png";
 const imgProfileTeam11 = "assets/images/img_profileTeam11.jpg";
+
+const imgProfileCustomer1 = "assets/images/img_customers1.png";
+const imgProfileCustomer2 = "assets/images/img_customers2.png";
+const imgProfileCustomer3 = "assets/images/img_customers3.png";
+const imgProfileCustomer4 = "assets/images/img_customers4.png";
+const imgProfileCustomer5 = "assets/images/img_customers5.png";
+const imgProfileCustomer6 = "assets/images/img_customers6.png";
+const imgProfileCustomer7 = "assets/images/img_customers7.png";
