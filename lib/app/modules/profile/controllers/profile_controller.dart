@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import '../../../core/assets.dart';
-import '../../../data/profile/fitur_profile_model.dart';
+import '../../../data/models/profile/fitur_profile_model.dart';
 import '../../../routes/app_pages.dart';
 
 class ProfileController extends GetxController {

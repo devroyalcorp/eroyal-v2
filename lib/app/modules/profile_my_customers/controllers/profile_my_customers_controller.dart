@@ -1,4 +1,4 @@
-import 'package:eroyal/app/data/profile/my_customers/dummy_my_customers_model.dart';
+import 'package:eroyal/app/data/models/profile/my_customers/dummy_my_customers_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

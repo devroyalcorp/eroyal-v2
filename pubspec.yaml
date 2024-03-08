@@ -6,7 +6,9 @@ environment:
   sdk: ">=3.2.0-134.1.beta <4.0.0"
 
 dependencies:
+  connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.2
+  dio: ^5.4.1
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1

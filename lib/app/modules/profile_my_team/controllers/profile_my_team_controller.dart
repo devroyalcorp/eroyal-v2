@@ -2,7 +2,7 @@ import 'package:eroyal/app/core/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../data/profile/my_team/dummy_my_team_model.dart';
+import '../../../data/models/profile/my_team/dummy_my_team_model.dart';
 
 class ProfileMyTeamController extends GetxController {
   TextEditingController searchE = TextEditingController();

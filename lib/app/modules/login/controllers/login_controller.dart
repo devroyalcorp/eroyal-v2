@@ -1,15 +1,42 @@
+import 'package:eroyal/app/core/helper.dart';
 import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../core/result.dart';
+import '../../../domain/entities/credential_entity.dart';
+import '../../../domain/usecase/auth/login.dart';
 
 class LoginController extends GetxController {
   TextEditingController emailOrPhoneNumber = TextEditingController();
   TextEditingController password = TextEditingController();
   final loginKey = GlobalKey<FormState>();
 
-  void login() {
+  Future<void> login() async {
+    late LoginParams params;
+    late LoginUseCase login;
+    late Result<CredentialEntity> result;
+    // late String fcmToken;
+    // late String route;
+
     if (loginKey.currentState!.validate()) {
-      Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR);
+      print("cekk");
+      params = LoginParams(
+        email: emailOrPhoneNumber.text,
+        password: password.text,
+        // fcmToken: fcmToken,
+      );
+
+      login = LoginUseCase();
+
+      result = await login.call(params);
+
+      if (result.status is Success) {
+        Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR);
+      } else {
+        print("fail");
+        showSnack(result.message);
+      }
     }
   }
 }

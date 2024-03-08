@@ -1,4 +1,4 @@
-import 'package:eroyal/app/data/home/fitur_model.dart';
+import 'package:eroyal/app/data/models/home/fitur_model.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
