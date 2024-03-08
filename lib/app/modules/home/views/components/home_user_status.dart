@@ -73,6 +73,9 @@ class HomeUserStatus extends StatelessWidget {
                 ),
               ],
             ),
+            const ESizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),

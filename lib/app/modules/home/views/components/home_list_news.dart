@@ -19,7 +19,7 @@ class HomeListNews extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: EPadding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
+        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 18),
         child: Column(
           children: [
             Row(
