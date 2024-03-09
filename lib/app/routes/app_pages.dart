@@ -33,7 +33,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () => HomeView(Get.arguments),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -77,12 +77,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PROFILE_MY_TEAM,
-      page: () => ProfileMyTeamView(),
+      page: () => const ProfileMyTeamView(),
       binding: ProfileMyTeamBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE_MY_CUSTOMERS,
-      page: () => ProfileMyCustomersView(),
+      page: () => const ProfileMyCustomersView(),
       binding: ProfileMyCustomersBinding(),
     ),
   ];

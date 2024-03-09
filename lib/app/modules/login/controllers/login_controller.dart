@@ -16,6 +16,7 @@ class LoginController extends GetxController {
     late LoginParams params;
     late LoginUseCase login;
     late Result<CredentialEntity> result;
+    late CredentialEntity dataCredential;
     // late String fcmToken;
     // late String route;
 
@@ -31,8 +32,13 @@ class LoginController extends GetxController {
 
       result = await login.call(params);
 
+      print(result.status.toString());
+
       if (result.status is Success) {
-        Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR);
+        final user = result.data;
+        dataCredential = user;
+        Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR,
+            arguments: dataCredential);
       } else {
         print("fail");
         showSnack(result.message);

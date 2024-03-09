@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
+import '../../../domain/entities/credential_entity.dart';
 import '../controllers/home_controller.dart';
 import 'components/home_list_news.dart';
 import 'components/home_user_info.dart';
@@ -15,7 +16,9 @@ import 'components/home_user_menu.dart';
 import 'components/home_user_status.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+  const HomeView(this.data, {super.key});
+
+  final CredentialEntity data;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class HomeView extends GetView<HomeController> {
                 style: EFonts.montserrat(4, 14),
               ),
               EText(
-                "Alghany Kennedy!",
+                data.username,
                 style: EFonts.montserrat(6, 16),
               ),
             ],
@@ -52,13 +55,15 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
-      body: const CustomScrollView(
+      body: CustomScrollView(
         scrollDirection: Axis.vertical,
         slivers: [
-          HomeUserInfo(),
-          HomeUserStatus(),
-          HomeUserMenu(),
-          HomeListNews(),
+          HomeUserInfo(
+            data: data,
+          ),
+          const HomeUserStatus(),
+          const HomeUserMenu(),
+          const HomeListNews(),
         ],
       ),
     );

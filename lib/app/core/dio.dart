@@ -25,6 +25,8 @@ class DioHelper {
 
     dio.interceptors.add(interceptors);
 
+    print(dio.options.queryParameters);
+
     return dio;
   }
 

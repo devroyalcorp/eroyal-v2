@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-
 import '../../core/dio.dart';
 import '../../core/result.dart';
 import '../../domain/entities/credential_entity.dart';
@@ -14,22 +12,25 @@ class AuthRepositoryImpl extends AuthRepository {
   Future<Result<CredentialEntity>> login({
     required LoginParams params,
   }) async {
-    const endpoint = "/auth/login";
+    const endpoint = "/auth/sign_in.json";
     final data = {
-      "email": params.email,
+      "username": params.email,
       "password": params.password,
     };
+
+    print(data);
 
     try {
       var response = await _dio.post(
         endpoint,
         data: data,
       );
+      print("AAAAAAAAAA");
+      print(response);
 
       return Result.success(CredentialModel.fromJson(response.data["user"]));
-    } on DioException catch (e) {
-      return DioHelper.handleErr(e);
     } catch (e) {
+      print("e2");
       return DioHelper.handleFatalErr(e);
     }
   }
