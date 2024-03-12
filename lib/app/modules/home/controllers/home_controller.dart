@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/assets.dart';
+import '../../../core/localdb.dart';
 
 class HomeController extends GetxController {
   final Uri _url = Uri.parse(
@@ -16,6 +17,12 @@ class HomeController extends GetxController {
     Fitur(name: 'E-Prosedur', svgUrl: icEProsedur),
     Fitur(name: 'Tracking Document', svgUrl: icTrackingDocument),
   ].obs;
+
+  @override
+  void onInit() {
+    print("TOKEN::::::::::::: ${LocalDb.credential?.fcmToken}");
+    super.onInit();
+  }
 
   Future<void> launchUrlNews() async {
     if (!await launchUrl(_url)) {

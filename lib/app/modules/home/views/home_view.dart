@@ -1,4 +1,5 @@
 import 'package:eroyal/app/core/assets.dart';
+import 'package:eroyal/app/core/localdb.dart';
 import 'package:eroyal/app/core/theme.dart';
 import 'package:eroyal/app/core/widgets/image_picture.dart';
 
@@ -8,7 +9,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
-import '../../../domain/entities/credential_entity.dart';
 import '../controllers/home_controller.dart';
 import 'components/home_list_news.dart';
 import 'components/home_user_info.dart';
@@ -16,9 +16,7 @@ import 'components/home_user_menu.dart';
 import 'components/home_user_status.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView(this.data, {super.key});
-
-  final CredentialEntity data;
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +37,7 @@ class HomeView extends GetView<HomeController> {
                 style: EFonts.montserrat(4, 14),
               ),
               EText(
-                data.username,
+                "name",
                 style: EFonts.montserrat(6, 16),
               ),
             ],
@@ -55,15 +53,13 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
-      body: CustomScrollView(
+      body: const CustomScrollView(
         scrollDirection: Axis.vertical,
         slivers: [
-          HomeUserInfo(
-            data: data,
-          ),
-          const HomeUserStatus(),
-          const HomeUserMenu(),
-          const HomeListNews(),
+          HomeUserInfo(),
+          HomeUserStatus(),
+          HomeUserMenu(),
+          HomeListNews(),
         ],
       ),
     );

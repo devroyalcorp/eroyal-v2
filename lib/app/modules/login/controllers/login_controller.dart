@@ -1,4 +1,5 @@
 import 'package:eroyal/app/core/helper.dart';
+import 'package:eroyal/app/core/localdb.dart';
 import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,9 +17,8 @@ class LoginController extends GetxController {
     late LoginParams params;
     late LoginUseCase login;
     late Result<CredentialEntity> result;
-    late CredentialEntity dataCredential;
     // late String fcmToken;
-    // late String route;
+    late String route;
 
     if (loginKey.currentState!.validate()) {
       print("cekk");
@@ -35,10 +35,14 @@ class LoginController extends GetxController {
       print(result.status.toString());
 
       if (result.status is Success) {
-        final user = result.data;
-        dataCredential = user;
-        Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR,
-            arguments: dataCredential);
+        LocalDb.credential = result.data;
+        LocalDb.loggedIn = true;
+
+        print("LOCAL DB CREDENTIAL::::: ${LocalDb.credential}");
+        print("LOCAL DB CREDENTIAL::::: ${LocalDb.loggedIn}");
+
+        route = Routes.BOTTOM_NAVIGATION_BAR;
+        Get.offAllNamed(route);
       } else {
         print("fail");
         showSnack(result.message);

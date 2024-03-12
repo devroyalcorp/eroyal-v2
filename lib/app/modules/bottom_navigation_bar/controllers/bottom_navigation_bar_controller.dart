@@ -17,7 +17,7 @@ import '../../../core/widgets/text.dart';
 
 class BottomNavigationBarController extends GetxController {
   final pages = <Widget>[
-    HomeView(Get.arguments),
+    const HomeView(),
     const PresensiView(),
     const NotificationView(),
     const ProfileView(),
