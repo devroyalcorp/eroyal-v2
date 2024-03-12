@@ -33,6 +33,7 @@ const imgNews1 = "assets/images/img_news1.png";
 const imgNews2 = "assets/images/img_news2.png";
 const imgNoResult = "assets/images/img_no_result.png";
 const imgNoResultGif = "assets/images/img_no-result.gif";
+const imgEmailSentGif = "assets/images/img_email_sent.gif";
 
 // avatar picture dummy
 const imgProfileTeam1 = "assets/images/img_profileTeam1.jpg";
