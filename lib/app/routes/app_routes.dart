@@ -15,6 +15,7 @@ abstract class Routes {
   static const COMING_SOON = _Paths.COMING_SOON;
   static const PROFILE_MY_TEAM = _Paths.PROFILE_MY_TEAM;
   static const PROFILE_MY_CUSTOMERS = _Paths.PROFILE_MY_CUSTOMERS;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const COMING_SOON = '/coming-soon';
   static const PROFILE_MY_TEAM = '/profile-my-team';
   static const PROFILE_MY_CUSTOMERS = '/profile-my-customers';
+  static const FORGOT_PASSWORD = '/forgot-password';
 }

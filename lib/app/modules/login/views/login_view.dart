@@ -4,6 +4,7 @@ import 'package:eroyal/app/core/widgets/auth_header.dart';
 import 'package:eroyal/app/core/widgets/formfield.dart';
 import 'package:eroyal/app/core/widgets/sizedbox.dart';
 import 'package:eroyal/app/core/widgets/text.dart';
+import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -56,7 +57,9 @@ class LoginView extends GetView<LoginController> with Validation {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.FORGOT_PASSWORD);
+                  },
                   child: EText(
                     'Forgot Password',
                     color: primary,
