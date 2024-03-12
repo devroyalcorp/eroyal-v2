@@ -3,6 +3,7 @@ import 'package:eroyal/app/core/localdb.dart';
 import 'package:eroyal/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/result.dart';
 import '../../../domain/entities/credential_entity.dart';
@@ -35,11 +36,30 @@ class LoginController extends GetxController {
       print(result.status.toString());
 
       if (result.status is Success) {
-        LocalDb.credential = result.data;
+        final user = result.data;
+
+        // final prefs = await SharedPreferences.getInstance();
+        // prefs.setInt('user_id', user.id);
+        // prefs.setString('user_email', user.email);
+        // prefs.setString('user_name', user.name);
+        // prefs.setString('user_code', user.code);
+        // prefs.setString('user_phoneNumber', user.phoneNumber);
+        // prefs.setString('user_username', user.username);
+        // prefs.setString('user_imageProfile', user.imageProfile);
+        // prefs.setString('user_fcmToken', user.fcmToken);
+
+        LocalDb.credential = user;
         LocalDb.loggedIn = true;
 
-        print("LOCAL DB CREDENTIAL::::: ${LocalDb.credential}");
-        print("LOCAL DB CREDENTIAL::::: ${LocalDb.loggedIn}");
+        // print("LOCAL DB CREDENTIAL::::: ${LocalDb.credential}");
+        // print("CREDENTIAL::::: ${LocalDb.credential}");
+        // CredentialEntity? storedCredentials = LocalDb.getCredential();
+
+        // if (storedCredentials != null) {
+        //   print("Stored credentials: ${storedCredentials.fcmToken}");
+        // } else {
+        //   print("Failed to retrieve stored credentials.");
+        // }
 
         route = Routes.BOTTOM_NAVIGATION_BAR;
         Get.offAllNamed(route);

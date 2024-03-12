@@ -36,9 +36,11 @@ class HomeView extends GetView<HomeController> {
                 "Good Morning! ☀",
                 style: EFonts.montserrat(4, 14),
               ),
-              EText(
-                "name",
-                style: EFonts.montserrat(6, 16),
+              Obx(
+                () => EText(
+                  controller.userName.value,
+                  style: EFonts.montserrat(6, 16),
+                ),
               ),
             ],
           ),

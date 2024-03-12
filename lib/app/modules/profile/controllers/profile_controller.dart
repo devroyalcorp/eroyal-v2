@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 
 import '../../../core/assets.dart';
+import '../../../core/localdb.dart';
 import '../../../data/models/profile/fitur_profile_model.dart';
+import '../../../domain/entities/credential_entity.dart';
 import '../../../routes/app_pages.dart';
 
 class ProfileController extends GetxController {
@@ -13,6 +15,8 @@ class ProfileController extends GetxController {
     FiturProfile(name: "Settings", icon: icSettings),
     FiturProfile(name: "Help Center", icon: icHelpCenter),
   ];
+
+  CredentialEntity? storedCredentials = LocalDb.getCredential();
 
   void edit() {
     Get.toNamed(Routes.PROFILE_EDIT);
