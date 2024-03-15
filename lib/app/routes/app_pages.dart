@@ -1,3 +1,5 @@
+import 'package:eroyal/app/modules/forgot_password/bindings/forgot_password_binding.dart';
+import 'package:eroyal/app/modules/forgot_password/views/forgot_password_view.dart';
 import 'package:get/get.dart';
 
 import 'package:eroyal/app/modules/bottom_navigation_bar/bindings/bottom_navigation_bar_binding.dart';
@@ -84,6 +86,11 @@ class AppPages {
       name: _Paths.PROFILE_MY_CUSTOMERS,
       page: () => const ProfileMyCustomersView(),
       binding: ProfileMyCustomersBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => const ForgotPasswordView(),
+      binding: ForgotPasswordBinding(),
     ),
   ];
 }
