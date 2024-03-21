@@ -12,6 +12,10 @@ const borderColor = Color.fromRGBO(217, 217, 217, 0.192);
 const red = Color.fromRGBO(236, 66, 96, 1);
 const greyText = Color.fromRGBO(99, 98, 98, 1);
 const green = Color(0xFF369B43);
+const shadowColor = Color.fromRGBO(224, 224, 236, .3);
+const red10 = Color.fromRGBO(236, 66, 96, .1);
+const green98 = Color.fromRGBO(54, 155, 67, .98);
+const green12 = Color.fromRGBO(54, 155, 67, .12);
 
 const BoxShadow shadowSmooth = BoxShadow(
   color: Color.fromRGBO(186, 190, 220, .15),

@@ -1,3 +1,4 @@
+import 'package:another_stepper/another_stepper.dart';
 import 'package:eroyal/app/core/theme.dart';
 import 'package:eroyal/app/data/models/tracking_document/dummy_tracking_document.dart';
 import 'package:flutter/material.dart';
@@ -15,21 +16,65 @@ class TrackingDocumentController extends GetxController {
       date: '2024-01-30',
       noDocument: "192",
       status: "Approved",
-      statusColor: green,
+      textColor: green,
+      statusColor: green12,
     ),
     DummyTrackingDocument(
       title: 'Price Agreement New Product',
       date: '2024-01-30',
       noDocument: "191",
       status: "Waiting",
-      statusColor: Colors.orange,
+      textColor: Colors.orange,
+      statusColor: Colors.orange.withOpacity(0.2),
     ),
     DummyTrackingDocument(
       title: 'Price Agreement New Product',
       date: '2024-01-30',
       noDocument: "190",
       status: "Rejected",
-      statusColor: red,
+      textColor: red,
+      statusColor: red10,
+    ),
+  ];
+
+  List<StepperData> stepperData = [
+    StepperData(
+      title: StepperText("Shipment Placed"),
+      subtitle: StepperText("23 Aug 2023, 04:25 PM"),
+      iconWidget: Container(
+        decoration: const BoxDecoration(
+          color: primary,
+          borderRadius: BorderRadius.all(
+            Radius.circular(30),
+          ),
+        ),
+        child: const Center(
+          child: Icon(Icons.check, color: white, size: 16),
+        ),
+      ),
+    ),
+    StepperData(
+      title: StepperText("In Progress"),
+      subtitle: StepperText("23 Aug 2023, 06:13 PM"),
+      iconWidget: Container(
+        decoration: const BoxDecoration(
+          color: primary,
+          borderRadius: BorderRadius.all(
+            Radius.circular(30),
+          ),
+        ),
+        child: const Center(
+          child: Icon(Icons.check, color: white, size: 16),
+        ),
+      ),
+    ),
+    StepperData(
+      title: StepperText("Shipped"),
+      subtitle: StepperText("24 Aug 2023, 08:00 AM"),
+    ),
+    StepperData(
+      title: StepperText("Approved"),
+      subtitle: StepperText("24 Aug 2023, 11: 00 AM"),
     ),
   ];
 

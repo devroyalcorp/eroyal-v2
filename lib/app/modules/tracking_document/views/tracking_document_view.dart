@@ -28,23 +28,21 @@ class TrackingDocumentView extends GetView<TrackingDocumentController> {
           onChanged: controller.onChanged,
         ),
         ESizedBox(
-          height: 650,
+          height: MediaQuery.of(context).size.height * 0.7,
           child: Obx(
             () => controller.filteredDocument.isNotEmpty
-                ? ListView.separated(
-                    separatorBuilder: (_, __) {
-                      return const Divider();
-                    },
-                    shrinkWrap: true,
+                ? ListView.builder(
+                    scrollDirection: Axis.vertical,
                     padding: EdgeInsets.zero,
                     itemCount: controller.filteredDocument.length,
                     itemBuilder: (_, index) {
                       final data = controller.filteredDocument[index];
                       return DocumentWidget(
                         title: data.title,
-                        noDocument: data.noDocument,
+                        noDocument: "Document No: ${data.noDocument}",
                         date: data.date,
                         status: data.status,
+                        textColor: data.textColor,
                         statusColor: data.statusColor,
                         onTap: () => Get.to(
                           () => const TrackingDocumentDetail(),

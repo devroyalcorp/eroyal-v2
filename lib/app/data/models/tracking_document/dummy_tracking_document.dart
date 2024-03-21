@@ -5,6 +5,7 @@ class DummyTrackingDocument {
   final String date;
   final String noDocument;
   final String status;
+  final Color textColor;
   final Color statusColor;
 
   DummyTrackingDocument({
@@ -12,6 +13,7 @@ class DummyTrackingDocument {
     required this.date,
     required this.noDocument,
     required this.status,
+    required this.textColor,
     required this.statusColor,
   });
 }
