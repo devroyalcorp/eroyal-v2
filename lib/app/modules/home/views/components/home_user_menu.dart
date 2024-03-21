@@ -27,7 +27,11 @@ class HomeUserMenu extends GetView<HomeController> {
         var i = controller.fiturList[index];
         return InkWell(
           onTap: () {
-            Get.toNamed(Routes.COMING_SOON);
+            if (i.name == "Tracking Document") {
+              Get.toNamed(Routes.TRACKING_DOCUMENT);
+            } else {
+              Get.toNamed(Routes.COMING_SOON);
+            }
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
