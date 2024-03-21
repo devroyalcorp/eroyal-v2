@@ -13,21 +13,31 @@ class HomeUserInfo extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return const SliverToBoxAdapter(
       child: EPadding(
-        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
-        child: Obx(
-          () => CustomCard(
-            shapeBorder: true,
-            isAvatarPicture: true,
-            title: controller.email.value,
-            subtitle: controller.phoneNumber.value,
-            thridLineTitle:
-                "${controller.code.value} | ${controller.name.value}",
-            isThridLine: true,
-            suffixIcon: false,
-          ),
+        padding: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
+        child: CustomCard(
+          shapeBorder: true,
+          isAvatarPicture: true,
+          title: "alghany@gmail.com", // controller.email.value,
+          subtitle: "08123456789", //controller.phoneNumber.value,
+          thridLineTitle:
+              "120299240321 | Admin Sales", //"${controller.code.value} | ${controller.name.value}",
+          isThridLine: true,
+          suffixIcon: false,
         ),
+        // Obx(
+        //   () => const CustomCard(
+        //     shapeBorder: true,
+        //     isAvatarPicture: true,
+        //     title: "alghany@gmail.com", // controller.email.value,
+        //     subtitle: "08123456789", //controller.phoneNumber.value,
+        //     thridLineTitle:
+        //         "120299240321 | Admin Sales", //"${controller.code.value} | ${controller.name.value}",
+        //     isThridLine: true,
+        //     suffixIcon: false,
+        //   ),
+        // ),
       ),
     );
   }

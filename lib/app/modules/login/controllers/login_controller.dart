@@ -10,7 +10,7 @@ import '../../../domain/entities/credential_entity.dart';
 import '../../../domain/usecase/auth/login.dart';
 
 class LoginController extends GetxController {
-  TextEditingController emailOrPhoneNumber = TextEditingController();
+  TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
   final loginKey = GlobalKey<FormState>();
 
@@ -23,50 +23,55 @@ class LoginController extends GetxController {
 
     if (loginKey.currentState!.validate()) {
       print("cekk");
-      params = LoginParams(
-        email: emailOrPhoneNumber.text,
-        password: password.text,
-        // fcmToken: fcmToken,
-      );
+      route = Routes.BOTTOM_NAVIGATION_BAR;
+      Get.offAllNamed(route);
 
-      login = LoginUseCase();
+      /// -- Remove comment if API is ready
 
-      result = await login.call(params);
+      // params = LoginParams(
+      //   email: username.text,
+      //   password: password.text,
+      //   // fcmToken: fcmToken,
+      // );
 
-      print(result.status.toString());
+      // login = LoginUseCase();
 
-      if (result.status is Success) {
-        final user = result.data;
+      // result = await login.call(params);
 
-        // final prefs = await SharedPreferences.getInstance();
-        // prefs.setInt('user_id', user.id);
-        // prefs.setString('user_email', user.email);
-        // prefs.setString('user_name', user.name);
-        // prefs.setString('user_code', user.code);
-        // prefs.setString('user_phoneNumber', user.phoneNumber);
-        // prefs.setString('user_username', user.username);
-        // prefs.setString('user_imageProfile', user.imageProfile);
-        // prefs.setString('user_fcmToken', user.fcmToken);
+      // print(result.status.toString());
 
-        LocalDb.credential = user;
-        LocalDb.loggedIn = true;
+      // if (result.status is Success) {
+      //   final user = result.data;
 
-        // print("LOCAL DB CREDENTIAL::::: ${LocalDb.credential}");
-        // print("CREDENTIAL::::: ${LocalDb.credential}");
-        // CredentialEntity? storedCredentials = LocalDb.getCredential();
+      //   // final prefs = await SharedPreferences.getInstance();
+      //   // prefs.setInt('user_id', user.id);
+      //   // prefs.setString('user_email', user.email);
+      //   // prefs.setString('user_name', user.name);
+      //   // prefs.setString('user_code', user.code);
+      //   // prefs.setString('user_phoneNumber', user.phoneNumber);
+      //   // prefs.setString('user_username', user.username);
+      //   // prefs.setString('user_imageProfile', user.imageProfile);
+      //   // prefs.setString('user_fcmToken', user.fcmToken);
 
-        // if (storedCredentials != null) {
-        //   print("Stored credentials: ${storedCredentials.fcmToken}");
-        // } else {
-        //   print("Failed to retrieve stored credentials.");
-        // }
+      //   LocalDb.credential = user;
+      //   LocalDb.loggedIn = true;
 
-        route = Routes.BOTTOM_NAVIGATION_BAR;
-        Get.offAllNamed(route);
-      } else {
-        print("fail");
-        showSnack(result.message);
-      }
+      //   // print("LOCAL DB CREDENTIAL::::: ${LocalDb.credential}");
+      //   // print("CREDENTIAL::::: ${LocalDb.credential}");
+      //   // CredentialEntity? storedCredentials = LocalDb.getCredential();
+
+      //   // if (storedCredentials != null) {
+      //   //   print("Stored credentials: ${storedCredentials.fcmToken}");
+      //   // } else {
+      //   //   print("Failed to retrieve stored credentials.");
+      //   // }
+
+      //   route = Routes.BOTTOM_NAVIGATION_BAR;
+      //   Get.offAllNamed(route);
+      // } else {
+      //   print("fail");
+      //   showSnack(result.message);
+      // }
     }
   }
 }

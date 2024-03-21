@@ -38,7 +38,7 @@ class ProfileHeader extends GetView<ProfileController> {
           Column(
             children: [
               EText(
-                controller.storedCredentials?.username ?? "",
+                "Alghany Kennedy", //controller.storedCredentials?.username ?? "",
                 style: EFonts.montserrat(6, 16),
               ),
               const ESizedBox(

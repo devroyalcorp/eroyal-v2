@@ -32,13 +32,14 @@ class LoginView extends GetView<LoginController> with Validation {
                 child: AuthHeader(),
               ),
               EText(
-                'Email or Phone Number',
+                'Username',
                 color: primary,
                 style: EFonts.montserrat(6, 18),
               ),
               const ESizedBox(height: 8),
               EFormField(
-                controller: controller.emailOrPhoneNumber,
+                controller: controller.username,
+                validator: usernameRequired,
               ),
               const ESizedBox(height: 24),
               EText(

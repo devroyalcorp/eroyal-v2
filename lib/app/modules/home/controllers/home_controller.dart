@@ -28,24 +28,24 @@ class HomeController extends GetxController {
     Fitur(name: 'Tracking Document', svgUrl: icTrackingDocument),
   ].obs;
 
-  @override
-  void onInit() {
-    init();
-    super.onInit();
-  }
+  // @override
+  // void onInit() {
+  //   init();
+  //   super.onInit();
+  // }
 
-  Future<void> init() async {
-    CredentialEntity? storedCredentials = LocalDb.getCredential();
+  // Future<void> init() async {
+  //   CredentialEntity? storedCredentials = LocalDb.getCredential();
 
-    id.value = storedCredentials?.id ?? 0;
-    email.value = storedCredentials?.email ?? "";
-    name.value = storedCredentials?.name ?? "";
-    code.value = storedCredentials?.code ?? "";
-    phoneNumber.value = storedCredentials?.phoneNumber ?? "";
-    userName.value = storedCredentials?.username ?? "";
-    imgProfile.value = storedCredentials?.imageProfile ?? "";
-    fcmToken.value = storedCredentials?.fcmToken ?? "";
-  }
+  //   id.value = storedCredentials?.id ?? 0;
+  //   email.value = storedCredentials?.email ?? "";
+  //   name.value = storedCredentials?.name ?? "";
+  //   code.value = storedCredentials?.code ?? "";
+  //   phoneNumber.value = storedCredentials?.phoneNumber ?? "";
+  //   userName.value = storedCredentials?.username ?? "";
+  //   imgProfile.value = storedCredentials?.imageProfile ?? "";
+  //   fcmToken.value = storedCredentials?.fcmToken ?? "";
+  // }
 
   Future<void> launchUrlNews() async {
     if (!await launchUrl(_url)) {
