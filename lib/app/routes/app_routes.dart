@@ -17,6 +17,7 @@ abstract class Routes {
   static const PROFILE_MY_CUSTOMERS = _Paths.PROFILE_MY_CUSTOMERS;
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const RESET_PASSWORD = _Paths.RESET_PASSWORD;
+  static const TRACKING_DOCUMENT = _Paths.TRACKING_DOCUMENT;
 }
 
 abstract class _Paths {
@@ -33,4 +34,5 @@ abstract class _Paths {
   static const PROFILE_MY_CUSTOMERS = '/profile-my-customers';
   static const FORGOT_PASSWORD = '/forgot-password';
   static const RESET_PASSWORD = '/reset-password';
+  static const TRACKING_DOCUMENT = '/tracking-document';
 }

@@ -1,10 +1,10 @@
-import 'package:eroyal/app/modules/forgot_password/bindings/forgot_password_binding.dart';
-import 'package:eroyal/app/modules/forgot_password/views/forgot_password_view.dart';
-import 'package:eroyal/app/modules/forgot_password/views/widgets/reset_password.dart';
 import 'package:get/get.dart';
 
 import 'package:eroyal/app/modules/bottom_navigation_bar/bindings/bottom_navigation_bar_binding.dart';
 import 'package:eroyal/app/modules/bottom_navigation_bar/views/bottom_navigation_bar_view.dart';
+import 'package:eroyal/app/modules/forgot_password/bindings/forgot_password_binding.dart';
+import 'package:eroyal/app/modules/forgot_password/views/forgot_password_view.dart';
+import 'package:eroyal/app/modules/forgot_password/views/widgets/reset_password.dart';
 import 'package:eroyal/app/modules/home/bindings/home_binding.dart';
 import 'package:eroyal/app/modules/home/views/home_view.dart';
 import 'package:eroyal/app/modules/login/bindings/login_binding.dart';
@@ -23,6 +23,8 @@ import 'package:eroyal/app/modules/profile_my_team/bindings/profile_my_team_bind
 import 'package:eroyal/app/modules/profile_my_team/views/profile_my_team_view.dart';
 import 'package:eroyal/app/modules/splash/bindings/splash_screen_binding.dart';
 import 'package:eroyal/app/modules/splash/views/splash_screen_view.dart';
+import 'package:eroyal/app/modules/tracking_document/bindings/tracking_document_binding.dart';
+import 'package:eroyal/app/modules/tracking_document/views/tracking_document_view.dart';
 
 import '../core/widgets/coming_soon.dart';
 
@@ -96,6 +98,11 @@ class AppPages {
     GetPage(
       name: _Paths.RESET_PASSWORD,
       page: () => const ResetPasswordView(),
+    ),
+    GetPage(
+      name: _Paths.TRACKING_DOCUMENT,
+      page: () => TrackingDocumentView(),
+      binding: TrackingDocumentBinding(),
     ),
   ];
 }
