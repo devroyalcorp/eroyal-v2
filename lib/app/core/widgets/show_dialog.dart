@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -235,6 +237,118 @@ alertDialog({
                       action: labelButton ?? "",
                     ),
                   ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+    barrierDismissible: dismissible,
+  );
+}
+
+pickDialog({
+  required dynamic Function() onTap,
+  required dynamic Function() onTapSelectTime,
+  String? title,
+  String? timeDesc,
+  String? labelButton,
+  double? bottomWidth,
+  bool dismissible = true,
+}) {
+  Get.dialog(
+    WillPopScope(
+      onWillPop: () async => false,
+      child: Dialog(
+        child: CardRounded(
+          margin: EdgeInsets.zero,
+          padding: EdgeInsets.zero,
+          borderRadius: 5.w,
+          child: EPadding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                EPadding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Text(
+                      title ?? '',
+                      style: EFonts.montserrat(7, 18),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                const ESizedBox(height: 15),
+                InkWell(
+                  onTap: onTapSelectTime,
+                  child: Container(
+                    height: 50.h,
+                    width: 300.w,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: black,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(8.0.r),
+                      ),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const EPadding(
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            right: 20,
+                          ),
+                          child: Icon(
+                            Icons.timer,
+                            color: primary,
+                            size: 28,
+                          ),
+                        ),
+                        Text(
+                          timeDesc ?? "Time Picker",
+                          style: EFonts.montserrat(5, 16),
+                        ),
+                        const Spacer(),
+                        const Icon(Icons.arrow_drop_down)
+                      ],
+                    ),
+                  ),
+                ),
+                const ESizedBox(
+                  height: 25,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Expanded(
+                      child: ESubmitButton(
+                        color: green,
+                        onTap: onTap,
+                        large: true,
+                        action: labelButton ?? "Clock In",
+                      ),
+                    ),
+                    const ESizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: ESubmitButton(
+                        color: red,
+                        onTap: onTap,
+                        large: true,
+                        action: labelButton ?? "Clock Out",
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

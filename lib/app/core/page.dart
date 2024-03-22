@@ -6,6 +6,7 @@ import 'package:eroyal/app/core/widgets/svg_picture.dart';
 import 'package:eroyal/app/core/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import 'assets.dart';
@@ -30,6 +31,8 @@ class EPage extends StatelessWidget {
     this.crossAxisAlignment,
     this.customAppBarColor,
     this.customAppBarTitleColor,
+    this.isFloatingActionButton = false,
+    this.onPressed,
   });
 
   final String title;
@@ -41,12 +44,14 @@ class EPage extends StatelessWidget {
   final Widget? child;
   final bool? loading;
   final bool? defaultActions;
+  final bool isFloatingActionButton;
   final String? leadingImg;
   final List<Widget>? actions;
   final Widget? bottomSheet;
   final CrossAxisAlignment? crossAxisAlignment;
   final Color? customAppBarColor;
   final Color? customAppBarTitleColor;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +71,35 @@ class EPage extends StatelessWidget {
     return WillPopScope(
       onWillPop: onWillPop,
       child: Scaffold(
+        floatingActionButton: isFloatingActionButton == true
+            ? ESizedBox(
+                width: 150,
+                child: FloatingActionButton(
+                  onPressed: onPressed,
+                  backgroundColor: primary,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        icEdit,
+                        color: white,
+                        height: 22,
+                      ),
+                      const ESizedBox(
+                        width: 15,
+                      ),
+                      Text(
+                        "Attend",
+                        style: EFonts.montserrat(6, 16, white),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            : null,
+        floatingActionButtonLocation: isFloatingActionButton == true
+            ? FloatingActionButtonLocation.centerFloat
+            : null,
         backgroundColor: white,
         body: Stack(
           children: [
