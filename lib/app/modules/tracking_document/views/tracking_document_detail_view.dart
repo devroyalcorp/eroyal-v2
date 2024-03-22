@@ -4,8 +4,10 @@ import 'package:eroyal/app/modules/tracking_document/controllers/tracking_docume
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/assets.dart';
 import '../../../core/page.dart';
 import '../../../core/theme.dart';
+import '../../../core/widgets/submit_button.dart';
 
 class TrackingDocumentDetail extends GetView<TrackingDocumentController> {
   const TrackingDocumentDetail({super.key});

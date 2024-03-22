@@ -18,12 +18,14 @@ class ESubmitButton extends StatelessWidget {
     this.large = false,
     this.prefixIcon,
     this.color,
+    this.prefixRadius,
   });
 
   final Function() onTap;
   final String action;
   final bool outlined;
   final double? borderRadius;
+  final double? prefixRadius;
   final EdgeInsets? padding;
   final TextStyle? actionStyle;
   final bool enabled;
@@ -66,7 +68,7 @@ class ESubmitButton extends StatelessWidget {
                     if (prefixIcon != null) ...[
                       ESvg(
                         prefixIcon!,
-                        radius: 14,
+                        radius: prefixRadius ?? 14,
                         color: outlined ? primary : white,
                       ),
                       const ESizedBox(

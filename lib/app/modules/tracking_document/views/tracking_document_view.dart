@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../core/assets.dart';
 import '../../../core/page.dart';
 import '../../../core/theme.dart';
 import '../../../core/widgets/no_result_widget.dart';
 import '../../../core/widgets/search_field.dart';
 import '../../../core/widgets/sizedbox.dart';
+import '../../../core/widgets/submit_button.dart';
 import '../controllers/tracking_document_controller.dart';
 import 'widgets/document_widget.dart';
 
@@ -22,6 +24,18 @@ class TrackingDocumentView extends GetView<TrackingDocumentController> {
       customAppBarTitleColor: white,
       customAppBarColor: primary,
       padding: const EdgeInsets.all(0),
+      bottomSheet: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ESubmitButton(
+            prefixIcon: icEdit,
+            prefixRadius: 24,
+            onTap: () {},
+            action: "Create Document",
+          )
+        ],
+      ),
       children: [
         ESearchField(
           controller: controller.searchD,

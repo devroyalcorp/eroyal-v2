@@ -6,6 +6,7 @@ environment:
   sdk: ">=3.2.0-134.1.beta <4.0.0"
 
 dependencies:
+  another_stepper: ^1.2.2
   connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.2
   dio: ^5.4.1

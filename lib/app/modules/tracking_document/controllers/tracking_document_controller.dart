@@ -12,7 +12,7 @@ class TrackingDocumentController extends GetxController {
 
   List<DummyTrackingDocument> listDummyDocument = <DummyTrackingDocument>[
     DummyTrackingDocument(
-      title: 'Price Agreement New Product',
+      title: 'Example Document Lorem Ipsum 1',
       date: '2024-01-30',
       noDocument: "192",
       status: "Approved",
@@ -20,7 +20,7 @@ class TrackingDocumentController extends GetxController {
       statusColor: green12,
     ),
     DummyTrackingDocument(
-      title: 'Price Agreement New Product',
+      title: 'Example Document Lorem Ipsum 2',
       date: '2024-01-30',
       noDocument: "191",
       status: "Waiting",
@@ -28,7 +28,7 @@ class TrackingDocumentController extends GetxController {
       statusColor: Colors.orange.withOpacity(0.2),
     ),
     DummyTrackingDocument(
-      title: 'Price Agreement New Product',
+      title: 'Example Document Lorem Ipsum 3',
       date: '2024-01-30',
       noDocument: "190",
       status: "Rejected",
@@ -39,7 +39,7 @@ class TrackingDocumentController extends GetxController {
 
   List<StepperData> stepperData = [
     StepperData(
-      title: StepperText("Shipment Placed"),
+      title: StepperText("Draft"),
       subtitle: StepperText("23 Aug 2023, 04:25 PM"),
       iconWidget: Container(
         decoration: const BoxDecoration(
@@ -54,7 +54,7 @@ class TrackingDocumentController extends GetxController {
       ),
     ),
     StepperData(
-      title: StepperText("In Progress"),
+      title: StepperText("Waiting"),
       subtitle: StepperText("23 Aug 2023, 06:13 PM"),
       iconWidget: Container(
         decoration: const BoxDecoration(
@@ -67,10 +67,6 @@ class TrackingDocumentController extends GetxController {
           child: Icon(Icons.check, color: white, size: 16),
         ),
       ),
-    ),
-    StepperData(
-      title: StepperText("Shipped"),
-      subtitle: StepperText("24 Aug 2023, 08:00 AM"),
     ),
     StepperData(
       title: StepperText("Approved"),

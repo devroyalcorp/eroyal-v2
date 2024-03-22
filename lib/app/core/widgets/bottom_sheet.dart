@@ -33,7 +33,7 @@ class EBottomSheet extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               blurRadius: 10,
-              offset: Offset(0, -6),
+              offset: Offset(0, 0.1),
               color: primary,
             ),
           ],
