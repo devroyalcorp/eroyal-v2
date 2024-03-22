@@ -11,8 +11,8 @@ import 'package:eroyal/app/modules/login/bindings/login_binding.dart';
 import 'package:eroyal/app/modules/login/views/login_view.dart';
 import 'package:eroyal/app/modules/notification/bindings/notification_binding.dart';
 import 'package:eroyal/app/modules/notification/views/notification_view.dart';
-import 'package:eroyal/app/modules/presensi/bindings/presensi_binding.dart';
-import 'package:eroyal/app/modules/presensi/views/presensi_view.dart';
+import 'package:eroyal/app/modules/attendance/bindings/attendance_binding.dart';
+import 'package:eroyal/app/modules/attendance/views/attendance_view.dart';
 import 'package:eroyal/app/modules/profile/bindings/profile_binding.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
 import 'package:eroyal/app/modules/profile_edit/bindings/profile_edit_binding.dart';
@@ -62,9 +62,9 @@ class AppPages {
       binding: NotificationBinding(),
     ),
     GetPage(
-      name: _Paths.PRESENSI,
-      page: () => const PresensiView(),
-      binding: PresensiBinding(),
+      name: _Paths.ATTENDANCE,
+      page: () => const AttendanceView(),
+      binding: AttendanceBinding(),
     ),
     GetPage(
       name: _Paths.BOTTOM_NAVIGATION_BAR,
@@ -101,7 +101,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TRACKING_DOCUMENT,
-      page: () => TrackingDocumentView(),
+      page: () => const TrackingDocumentView(),
       binding: TrackingDocumentBinding(),
     ),
   ];

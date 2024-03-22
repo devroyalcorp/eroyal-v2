@@ -4,7 +4,7 @@ import 'package:eroyal/app/core/assets.dart';
 import 'package:eroyal/app/core/theme.dart';
 import 'package:eroyal/app/modules/home/views/home_view.dart';
 import 'package:eroyal/app/modules/notification/views/notification_view.dart';
-import 'package:eroyal/app/modules/presensi/views/presensi_view.dart';
+import 'package:eroyal/app/modules/attendance/views/attendance_view.dart';
 import 'package:eroyal/app/modules/profile/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,21 +18,21 @@ import '../../../core/widgets/text.dart';
 class BottomNavigationBarController extends GetxController {
   final pages = <Widget>[
     const HomeView(),
-    const PresensiView(),
+    const AttendanceView(),
     const NotificationView(),
     const ProfileView(),
   ];
 
   final menuItems = <String, String>{
     "Home": icHome,
-    "Presensi": icPresensi,
+    "Attendance": icPresensi,
     "Notifications": icNotification,
     "Profile": icProfile,
   };
 
   final menuTitleItems = <String, String>{
     "Home": "Home",
-    "Presensi": "Presensi",
+    "Attendance": "Attendance",
     "Notification": "Notifications",
     "Profile": "Profile",
   };

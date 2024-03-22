@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/widgets/coming_soon.dart';
-import '../controllers/presensi_controller.dart';
+import '../controllers/attendance_controller.dart';
 
-class PresensiView extends GetView<PresensiController> {
-  const PresensiView({super.key});
+class AttendanceView extends GetView<AttendanceController> {
+  const AttendanceView({super.key});
 
   @override
   Widget build(BuildContext context) {
