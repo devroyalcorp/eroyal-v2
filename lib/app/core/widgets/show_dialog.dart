@@ -359,3 +359,57 @@ pickDialog({
     barrierDismissible: dismissible,
   );
 }
+
+showCustomSuccessSnackBar({
+  Function()? onTap,
+  required String title,
+  String? labelButton,
+  double? bottomWidth,
+}) {
+  ScaffoldMessenger.of(Get.context!).showSnackBar(
+    SnackBar(
+      margin: EdgeInsets.only(
+        bottom: MediaQuery.of(Get.context!).size.height - 160,
+        left: 80,
+        right: 80,
+      ),
+      backgroundColor: green,
+      behavior: SnackBarBehavior.floating,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      content: Text(
+        title,
+        style: EFonts.montserrat(7, 14, white),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  );
+}
+
+showCustomFailureSnackBar({
+  Function()? onTap,
+  required String title,
+  String? labelButton,
+  double? bottomWidth,
+}) {
+  ScaffoldMessenger.of(Get.context!).showSnackBar(
+    SnackBar(
+      margin: EdgeInsets.only(
+        bottom: MediaQuery.of(Get.context!).size.height - 160,
+        left: 80,
+        right: 80,
+      ),
+      backgroundColor: red,
+      behavior: SnackBarBehavior.floating,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      content: Text(
+        title,
+        style: EFonts.montserrat(7, 14, white),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  );
+}

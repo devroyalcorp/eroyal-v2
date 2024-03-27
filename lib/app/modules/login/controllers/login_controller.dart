@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/result.dart';
+import '../../../core/widgets/show_dialog.dart';
 import '../../../domain/entities/credential_entity.dart';
 import '../../../domain/usecase/auth/login.dart';
 
@@ -23,8 +24,9 @@ class LoginController extends GetxController {
 
     if (loginKey.currentState!.validate()) {
       print("cekk");
-      route = Routes.BOTTOM_NAVIGATION_BAR;
-      Get.offAllNamed(route);
+      showCustomSuccessSnackBar(title: "Login Success");
+      // route = Routes.BOTTOM_NAVIGATION_BAR;
+      // Get.offAllNamed(route);
 
       /// -- Remove comment if API is ready
 
