@@ -33,15 +33,15 @@ class _AuthHeaderState extends State<AuthHeader> {
             ? const Text('baseUrl : http://example.internal.co.id')
             : const Text('baseUrl : http://api.ras.co.id/'),
         const ESizedBox(
-          height: 20,
+          height: 300,
         ),
-        const EImages(
-          name: imgLogo,
-          width: 150,
-        ),
-        const ESizedBox(
-          height: 55,
-        )
+        // const EImages(
+        //   name: imgLogo,
+        //   width: 150,
+        // ),
+        // const ESizedBox(
+        //   height: 55,
+        // )
       ],
     );
   }

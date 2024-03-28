@@ -35,6 +35,7 @@ const imgNoResult = "assets/images/img_no_result.png";
 const imgNoResultGif = "assets/images/img_no-result.gif";
 const imgEmailSentGif = "assets/images/img_email_sent.gif";
 const imgWarning = "assets/images/img_warning.png";
+const imgBgLogin = "assets/images/img_bg_login.png";
 
 // avatar picture dummy
 const imgProfileTeam1 = "assets/images/img_profileTeam1.jpg";

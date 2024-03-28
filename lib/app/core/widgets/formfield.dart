@@ -31,6 +31,7 @@ class EFormField extends StatefulWidget {
     this.autoFocus = false,
     this.maxLength,
     this.onChanged,
+    this.focusNode,
   });
 
   final TextEditingController controller;
@@ -54,14 +55,15 @@ class EFormField extends StatefulWidget {
   final bool autoFocus;
   final int? maxLength;
   final void Function(String)? onChanged;
+  final FocusNode? focusNode;
 
   @override
   State<EFormField> createState() => _EFormFieldState();
 }
 
 class _EFormFieldState extends State<EFormField> {
-  late bool _obscure;
   late FocusNode _focusNode;
+  late bool _obscure;
 
   @override
   void initState() {
@@ -107,7 +109,7 @@ class _EFormFieldState extends State<EFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.controller,
-      focusNode: _focusNode,
+      focusNode: widget.focusNode,
       onTap: widget.onTap,
       onChanged: widget.onChanged ?? (widget.isCurrency ? _onChaged : null),
       validator: widget.validator,

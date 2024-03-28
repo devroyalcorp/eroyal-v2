@@ -14,6 +14,32 @@ class LoginController extends GetxController {
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
   final loginKey = GlobalKey<FormState>();
+  final FocusNode focusNode = FocusNode();
+
+  RxBool isFocus = false.obs;
+
+  @override
+  void onInit() {
+    focusNode.addListener(_onFocusChange);
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    focusNode.removeListener(_onFocusChange);
+    focusNode.dispose();
+    super.dispose();
+  }
+
+  void _onFocusChange() {
+    if (focusNode.hasFocus == false) {
+      isFocus(false);
+    } else {
+      isFocus(true);
+    }
+
+    debugPrint("Focus: ${focusNode.hasFocus.toString()}");
+  }
 
   Future<void> login() async {
     late LoginParams params;
